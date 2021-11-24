@@ -18,10 +18,10 @@ export default function Home() {
 
           <div className="payment-methods">
             <div className="row buy-paypal">
-              <PaypalPayment price="10" title="Book PP" />
+              <PaypalPayment price="1" title="Book PP" />
             </div>
             <div className="row buy-stripe">
-              <StripePayment price="10" title="Book" />
+              <StripePayment price="1" title="Book" />
             </div>
           </div>
 
