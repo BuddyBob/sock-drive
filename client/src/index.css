@@ -1,29 +1,49 @@
+/* 
+THAVAS 1
 :root {
   --primary: #e8eae3;
   --secondary: #f50057;
   --highlight: #373833;
-}
+} */
 
-/* combinations:
-white - #E8EAE3;
- - #fcde67
-black - #030e12 */
+
+:root {
+  --primary: #f8eee3;
+  --navbar: #ffb049;
+  --navbar_text: #f8eee3;
+  --btn:#ffb049;
+  --text: #373833;
+  --product_background:#b6cddb;
+  --background:#f8eee3
+} 
+
+
 
 body {
   padding: 0;
   margin: 0;
   font-family: "Roboto";
-  background-color: var(--primary);
+  background-color: var(--background);
   overflow-x: hidden;
 }
 
 .title {
   position: absolute;
-  margin-top: 100px;
-  left: 40%;
-  font-size: 100px;
+  margin-top: 120px;
+  font-size: 80px;
   color: var(--highlight);
   font-family: "Indie Flower";
+  text-align: center;
+  left:5%;
+}
+
+.banner{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 25%;
+  height: 25%;
 }
 
 /*
@@ -38,13 +58,14 @@ body {
 
 /* buy buttons */
 .buy-btn {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: var(--btn);
+  color: var(--text);
   position: relative;
   margin-top: 0px;
   border-radius: 5%;
   float: left;
   font-size: 1.4em;
+  width:100%;
   font-weight: bold;
   font-family: "Indie Flower";
   font-weight: bold;
@@ -52,7 +73,7 @@ body {
   -webkit-box-shadow: 0px 0px 4px 1px var(--highlight);
   box-shadow: 0px 2px 2px 1px var(--highlight);
   text-align: center;
-  margin-right: 50px;
+  margin-right: 240px;
 }
 
 .buy-btn:hover {
@@ -61,30 +82,19 @@ body {
   box-shadow: 0 0 11px;
 }
 .buy-btn-icon-stripe{
-  width:30px;
+  width:100px;
   position:relative;
   right:14px;
-  marginRight:10px;
+  margin-right:100px;
 }
-.buy-btn-icon-paypal{
-  width:55px;
-  position:relative;
-  right:23px;
-  marginRight:-6px;
-}
-/* buy button containers (paypal, stripe)*/
+
 .payment-methods {
   display: flex;
   position: relative;
   left: 48px;
 }
 
-/* page for paypal paying options */
-.paypal-buttons {
-  margin: auto;
-  width: 40%;
-  margin-top: 10%;
-}
+
 
 /*
 .########..########...#######..########..##.....##..######..########................########..####..######..########..##..........###....##....##
@@ -105,13 +115,12 @@ body {
 /* product description */
 .description {
   position: absolute;
-  text-align: left;
-  margin-left: 37%;
   font-family: "Indie Flower";
-  color: var(--highlight);
+  color: var(--text);
   font-size: 35px;
   line-height: 2;
   top: 100px;
+  left:40%;
 }
 
 /* product info container */
@@ -120,7 +129,7 @@ body {
   top: 300px;
   left: 100px;
   width: 86%;
-  background-color: #95989e;
+  background-color: var(--product_background);
   padding-right: -40px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -129,6 +138,16 @@ body {
   padding: 50px;
 }
 
+
+
+.desc_intro{
+  position: relative;
+  text-align: left;
+  font-family: "Indie Flower";
+  color: var(--text);
+  font-size: 35px;
+  line-height: 2;
+}
 /*
 .##....##....###....##.....##.########.....###....########....
 .###...##...##.##...##.....##.##.....##...##.##...##.....##...
@@ -144,11 +163,12 @@ body {
   padding: 0;
   height: 100px;
   z-index: 1000;
+  background-color: var(--navbar);
 }
 
 .logo {
   font-family: "Roboto Mono", courier, sans-serif;
-  color: var(--primary);
+  color: var(--navbar_text);
   font-size: 2rem;
   margin-left: 40px;
   text-decoration: none;
@@ -156,7 +176,7 @@ body {
 }
 
 .logo:hover {
-  color: var(--highlight);
+  color: var(--navbar_text);
 }
 
 .navbar-links ul {
@@ -175,7 +195,7 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--navbar_text);
   padding: 1rem;
   display: block;
   font-family: "Roboto Mono", courier, sans-serif;
@@ -188,6 +208,25 @@ body {
 .navbar-links li a:hover {
   color: var(--highlight);
 }
+
+/*
+..######...#######..##....##.########....###.....######..########....########..#######..########..##.....##
+.##....##.##.....##.###...##....##......##.##...##....##....##.......##.......##.....##.##.....##.###...###
+.##.......##.....##.####..##....##.....##...##..##..........##.......##.......##.....##.##.....##.####.####
+.##.......##.....##.##.##.##....##....##.....##.##..........##.......######...##.....##.########..##.###.##
+.##.......##.....##.##..####....##....#########.##..........##.......##.......##.....##.##...##...##.....##
+.##....##.##.....##.##...###....##....##.....##.##....##....##.......##.......##.....##.##....##..##.....##
+..######...#######..##....##....##....##.....##..######.....##.......##........#######..##.....##.##.....##
+*/
+
+.contact{
+  position: absolute;
+  width:50%;
+  left:25%;
+  top:25%;
+
+}
+
 
 /*
 .##.....##.########.########..####....###.................#######..##.....##.########.########..####.########..######.
@@ -209,44 +248,95 @@ body {
     position: relative;
     width:600px;
     right:80px;
+    bottom:80px
   }
   .description{
     position: absolute;
     font-size: 30px;
-    top:120px;
-    right:50px;
+    top:0px;
+    right:100px;
   }
   .payment-methods{
     position: relative;
     left:-30px;
   }
-  .buy-btn-icon-stripe{
+  /* .buy-btn-icon-stripe{
     max-width:15%;
     position:relative;;
-  }
+  } */
   .buy-btn-icon-paypal{
     max-width:25%;
     right:25px;
   }
   .buy-btn{
-    font-size:18px
+    position: relative;
+    font-size:18px;
+    bottom:100%;
+    color:aliceblue
+    
+  }
+
+  .desc_intro{
+    position: relative;
+    right:4%
   }
 }
 
 
 @media screen and (max-width:1500px){
   .description{
-    position: relative;
-    top:0%;
-
+    position: inherit;
+    margin-left:-10%;
   }
   .product-image{
     position: relative;
-    float:right;
-    right:18%;
+    text-align: left;
+    max-width:70%;
+    min-width:65%;
   }
   .payment-methods{
-    position: absolute;
-    left:40%;
+    position: relative;
+    text-align: left;
+
   }
+  .buy-btn{
+    position: relative;
+
+  }
+  .desc_intro{
+    position: relative;
+    right:70px;
+  }
+}
+
+@media screen and (max-width:880px){
+  .title{
+    font-size: 50px;
+    text-align: center;
+  }
+  .desc_intro{
+    font-size: 30px;
+    top:-50px
+  }
+  .description{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .buy-btn{
+    right:10%;
+  }
+}
+
+@media  screen and (max-width: 590px) {
+
+  .buy-btn{
+    right:0%;
+    width:50%;
+  }
+  .product-image{
+    right:17%;
+  }
+  
 }
