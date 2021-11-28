@@ -44,7 +44,7 @@ app.post("/payment",(req,res) => {
 })
 //listen
 
-const whitelist = ['http://localhost:3000', 'http://localhost:8282', 'https://sock-drive.herokuapp.com/ ']
+const whitelist = ['http://localhost:3000 ']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
