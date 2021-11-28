@@ -7,9 +7,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 //routs
-app.get("/",(req,res) => {
-    res.send("It works HEHEHEH")
-})
 
 app.post("/payment",(req,res) => {
 
@@ -44,7 +41,7 @@ app.post("/payment",(req,res) => {
 })
 //listen
 
-const whitelist = ['http://localhost:3000 ']
+const whitelist = ['http://localhost:3000', 'https://localhost:8282']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
@@ -61,14 +58,12 @@ app.use(cors(corsOptions))
 
 
 const path = require('path');
-if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+app.get('*', function(req, res) {
+res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 
 const port = process.env.PORT || 8282
