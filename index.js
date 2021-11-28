@@ -1,12 +1,17 @@
 const cors = require("cors")
 const express = require("express")
-const stripe = require("stripe")("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")
+const stripe = require("stripe")("sk_test_51JNn34EA934vxolt8b1M8HBLL9AUXrKNVWcWrGUGPH49jiRnUDU7ZqG8xa6IznIoOLjNc8TrnbzcIqHz3j7irsgr00BFcHlGZL")
+
 const { v4: uuidv4 } = require('uuid');
 const app = express()
 //middleware
 app.use(express.json())
 app.use(cors())
 //routs
+
+app.get("/", (req, res) => {
+    res.send("hello world")
+})
 
 app.post("/payment",(req,res) => {
 
@@ -66,6 +71,5 @@ res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 
-const port = process.env.PORT || 8282
 
-app.listen(port, () => console.log("Listening at port 8282"))
+app.listen(8282, () => console.log("Listening at port 8282"))

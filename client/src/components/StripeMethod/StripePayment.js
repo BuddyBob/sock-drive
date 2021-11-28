@@ -28,7 +28,7 @@ export default function StripePayment(product) {
     return (
         <div>
                       
-            <StripeCheckout stripeKey="pk_live_51JNn34EA934vxolt8qa7xG7ZkaJnfk6BqBYbzJDd8PXn2CpYOd5XRUHLQtorYB9mDMIxEEXbfMHTGCml8i8TN9bF008xwquqr7" message={"Thank you for your order!"} token={makePayment} name={product.title} amount={product.price * 100} >
+            <StripeCheckout stripeKey="pk_test_51JNn34EA934vxoltGlS1lzurj1QbG6dCdUvModYkoNb1qEcTXA6vHck3w8mnmuTj7aNXQkJn4a80wca5qKmRRONn00Q2PcPgbd" message={"Thank you for your order!"} token={makePayment} name={product.title} amount={product.price * 100} >
                 <button className="btn-large buy-btn">
                   <img className="buy-btn-icon-stripe" style={{width:"30px",position:"relative",right:'14px',marginRight:"10px"}} src={StripeIcon} alt="stripe-"/>
                   Buy ${product.price}
