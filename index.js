@@ -71,5 +71,6 @@ res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 
+const port = process.env.PORT || 8282
 
-app.listen(8282, () => console.log("Listening at port 8282"))
+app.listen(port, () => console.log("Listening at port 8282"))
