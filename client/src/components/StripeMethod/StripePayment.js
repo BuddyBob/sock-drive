@@ -15,14 +15,14 @@ export default function StripePayment(product) {
         return fetch(`http://localhost:8282/payment`, {
           method: "POST",
           headers,
-          body: body
+          body: JSON.stringify(body)
         })
         .then(response => {
           console.log("Response: " + response);
           const {status} = response;
           console.log("Status" + status);
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log(error+"hKDJFLKSJDFLKFjdklsjf HELLO"));
       }
     
     return (
